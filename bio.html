@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>About Me Layout</title>
+
+
+<body>
+    <div class="container">
+        <div class="top-section">
+            <div class="quote">"Confidence is the key to success"</div>
+            <div class="hero">
+                <div class="hero-text">
+                    "I am a passionate and driven leader who firmly believes that any field of interest, no matter how niche or unconventional, has the potential to bring great success. The key lies in unwavering passion and dedicated hard work. I value teamwork and strongly believe in collaborating with my team to achieve shared goals and drive meaningful results"
+                </div>
+                <div class="circle-image"></div>
+                
+            </div>
+        </div>
+        <div class="about-header">
+            <h1><span class="bold-text">Om</span> <span class="italic-text">Rashiya</span></h1>
+        </div>
+        
+        <div class="bottom-section">
+            <div class="passions">
+                <h2>PASSIONS & INTERESTS</h2>
+                <ul>
+                    <li>Business and marketing</li>
+                    <li>Robotics and automation</li>
+                    <li>Web development</li>
+                    <li>Quantum Mechanics</li>
+                    <li>Creative Writing and Literature</li>
+                    <li>Musical instruments and Composition</li>
+                </ul>
+            </div>
+            <div class="education" id="educationBox">
+                <span class="arrow-icon">↗</span>
+                <div class="text-wrapper"></div>
+                <div>EDUCATIONAL BACKGROUND</div>
+            </div>
+            
+            <!-- Modal Structure -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    
+                    <!-- Carousel Container -->
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="education1.png" alt="Image 1" class="carousel-image">
+                            <img src="education2.png" alt="Image 2" class="carousel-image">  
+                        </div>
+            
+                        <!-- Arrows for navigation -->
+                        <span class="arrow left" id="prevArrow">&#10094;</span>
+                        <span class="arrow right" id="nextArrow">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            <script>
+// Get modal and related elements
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const educationBox = document.getElementById("educationBox");
+const prevArrow = document.getElementById("prevArrow");
+const nextArrow = document.getElementById("nextArrow");
+const carouselImages = document.querySelector(".carousel-images");
+let currentIndex = 0;
+
+// Open the modal when education box is clicked
+educationBox.onclick = function() {
+    modal.style.display = "flex";
+};
+
+// Close the modal when close icon is clicked
+closeModal.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Close the modal when clicking anywhere outside the modal content
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+// Function to change image
+function updateCarousel() {
+    const images = document.querySelectorAll(".carousel-image");
+    const totalImages = images.length;
+    
+    // Reset the carousel position based on the current index
+    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Move to the previous image
+prevArrow.onclick = function() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = 2; // Loop back to the last image
+    }
+    updateCarousel();
+};
+
+// Move to the next image
+nextArrow.onclick = function() {
+    if (currentIndex < 2) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Loop back to the first image
+    }
+    updateCarousel();
+};
+            </script>
+
+
+
+
+
+
+            <div class="traits">
+                <div class="trait">LEADER</div>
+                <div class="trait dark">CREATIVE</div>
+                <div class="trait">ORATOR</div>
+                <div class="trait dark">CONFIDENT</div>
+            </div>
+
+            
+            <div class="victories">
+                <span class="arrow-icon">↗</span>
+                <div class="text">
+                <div>VICTORIES & ACHIEVEMENTS</div>
+            </div>  
+        </div>  
+    </div>
+
+
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/rashiyaom/profilecard/?igsh=MWc3ZDd2OWRzbzkybA==" target="_blank">INSTAGRAM</a>
+        <a href="https://www.linkedin.com/in/om-rashiya-b71a7931a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LINKEDIN</a>
+        <a href="https://github.com/rashiyaom" target="_blank">GITHUB</a>
+        <a href="https://wa.me/9727662885" target="_blank">WHATSAPP</a>
+    </div>
+
+
+    
+
+
+</body>
+</html>
+
