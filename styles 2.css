@@ -1,0 +1,466 @@
+/* Reset and base styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure padding and border are included in element size */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Apply Arial font */
+    background-color: #1a1a1a; /* Dark background color */
+    color: #2a2a27; /* Default text color */
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+
+
+html {
+    scroll-behavior:smooth;
+}
+
+
+
+
+/* Container for the whole page */
+.container {
+    max-width: 1600px; /* Set maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 1rem; /* Add padding inside the container */
+  
+   
+}
+
+
+
+
+
+
+/* Header styles */
+header {
+    background-color: #d4c8b4; /* Light background color for the header */
+    padding: 1rem; /* Padding inside the header */
+    border-radius: 0.75rem; /* Rounded corners for header */
+    margin-bottom: 0.8rem; /* Margin below the header */
+   
+}
+
+/* Navigation menu inside header */
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items in the nav */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* OM RASHIYA HEADING */
+.logo {
+    font-size: 2.5rem; /* Larger font size for the logo */
+    font-family: serif; /* Serif font for the logo */
+}
+
+.logo span:first-child {
+    font-weight: bold; /* Make the first part of the logo bold */
+}
+
+.logo span:last-child {
+    font-style: italic; /* Italicize the second part of the logo */
+}
+
+/* Navigation links */
+.nav-links {
+    font-size: 1.1rem;
+    display: flex; /* Flexbox layout for the navigation links */
+    gap: 3rem; /* Space out the navigation links */
+    margin-right: 40px;
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #2a2a27; /* Set the color of the links */
+    font-weight: 800; /* Medium font weight for the links */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Underline the links when hovered */
+}
+
+/* Main content layout using grid */
+.main-content {
+    display: grid; /* Use grid for layout */
+    gap: 0.8em; /* Space out grid items */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Automatically adjust number of columns */
+}
+
+
+/* Common styles for each section inside the grid, excluding Contact Me and .profile-section */
+.main-content > div:not(.contact-me):not(.profile-section):not(.profile-sections) {
+    background-color: #d4c8b4; /* Light background color for each section */
+    border-radius: 0.75rem; /* Rounded corners for each section */
+    padding: 2rem; /* Padding inside each section */
+}
+
+
+
+
+
+
+
+
+
+/* Quote section */
+.quote-section {
+    position: relative;
+    grid-column: span 2;
+    padding: 1rem;
+    height: 450px;
+    overflow: hidden;
+   
+}
+
+
+
+/* Style for the h1 */
+.quote-section h1 {
+    font-family: serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    max-width: 37rem;
+    margin-top: 200px;
+    word-spacing: 7px;;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Profile image section */
+
+.profile-section {
+    padding: 0; /* Remove padding from the container */
+    overflow: hidden; /* Ensures no overflow if the image exceeds container boundaries */
+}
+
+.profile-section img {
+    width: 100%; /* Make the image smaller */
+    height: 450px; /* Maintain aspect ratio */
+    border-radius: 0.5rem;
+    object-fit: cover;
+    filter: grayscale(0.7);
+
+  
+}
+
+
+
+/* Bio section */
+.bio-section {
+    position: relative;
+    padding: 2rem;
+    background-color: #f4f4f4; /* Optional: set background color for the section */
+}
+
+
+
+/* Styling for the paragraph */
+/* ABOUT ME Section Styling */
+.bio-section {
+    margin: 2px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -8px;
+}
+
+/* Heading styling */
+.bio-section h2 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #2a2a27;
+    letter-spacing: 1px;
+    position: relative; /* Allows absolute positioning of the arrow */
+    text-align: center;
+    margin-bottom: -10px;
+   
+}
+
+/* Styling for the arrow icon in ABOUT ME section */
+.bio-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Arrow Styling */
+.arrow {
+    margin-right: 10px;
+    position: absolute;
+    top: 10px; /* Position from top */
+    right: 10px; /* Position from right */
+    font-size: 30px; /* Increase size */
+    font-weight: bold;
+    color: #201e1e; /* Darker shade */
+    transform: rotate(-45deg); /* Tilt the arrow */
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for thickness effect */
+}
+
+/* Hover Effect for the Arrow (When hovering over the .bio-section) */
+.bio-section:hover .arrow {
+   
+    transform: rotate(-45deg) scale(1.2); /* Scale and keep tilt on hover */
+    color: #ffffff; /* Even darker color */
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7); /* Make shadow more prominent */
+}
+
+/* Text styling */
+.bio-section p {
+    font-size: 1rem;
+    color: #2a2a27;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 40px;
+}
+
+/* Fade-in animation */
+.bio-section h2 {
+    animation: fadeIn 1.5s ease;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+/* Contact section */
+.contact-me {
+    background-color: #2a2a27; /* Different background color for Contact Me */
+    color: #d4c8b4; /* Text color for contrast */
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-top: -7px;
+}
+
+
+.contact-info {
+    display: flex; /* Flexbox layout for contact info */
+    justify-content: space-between; /* Space out the items */
+   
+    font-size: medium;
+    
+}
+
+/* Contact heading styles */
+.contact-me h2 {
+    font-family: serif; /* Serif font for the heading */
+    font-size: 3rem; /* Large font size for the heading */
+    margin-top: 200px; /* Push the heading to the bottom of the container */
+    margin-bottom: 0px;
+}
+
+
+
+
+.languages-section{
+    margin-top: -7px;
+}
+
+
+/* Languages section */
+.languages-section h2 {
+    font-size: 1.25rem; /* Set font size for languages heading */
+    font-weight: 500; /* Medium font weight for the heading */
+    margin-bottom: 0rem; /* Add margin below the heading */
+
+}
+
+.languages-section ul {
+    list-style-type: none; /* Remove default list styling */
+    font-family: serif; /* Use serif font for the list */
+    font-size: 1.25rem; /* Set font size for the list items */
+ 
+}
+
+.languages-section li {
+    margin-bottom: 1rem; /* Add space between list items */
+}
+
+.languages-section hr { /*the line below languages*/
+    border: none;
+    border-top: 2px solid #4a4a4a; /* Adjust color and thickness */
+    margin-top: 3px; /* Spacing from the content */
+    margin-bottom: 20px;
+    width: 100%; /* Make it stretch across the section */
+}
+
+.languages-section h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.languages-section svg {
+    vertical-align: middle; /* Aligns the SVG with the text */
+    margin-left: 0.5rem; /* Optional spacing between text and arrow */
+    transition: filter 0.3s ease; /* Smooth transition for the glow effect */
+}
+
+/* Style for SVG arrows inside contact and languages sections */
+.contact-me svg{ 
+    stroke: #e5e0d7; /* Set the stroke color to match your design (dark color) */
+}
+
+.languages-section svg {
+    stroke: #1a1a1a;
+    
+}
+
+
+/* Apply hover effect to the arrow and svg icons when the section is hovered */
+
+.arrow-icon,
+.bio-section:hover svg,
+.contact-me:hover svg,
+.languages-section:hover svg {
+    transform: scale(1.8);
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 1)); /* Soft dark glow */
+}
+
+
+
+
+/* Social links */
+.social-links {
+    grid-column: 1 / -1; /* Ensure it spans full width of grid */
+    margin-top: -1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make the container take up full width */
+    height: 60%;
+    
+}
+
+
+/* Social link styles */
+.social-links a {
+    color: #1a1a1a; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Underline links when hovered */
+}
+
+
+
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Stack all sections in one column */
+    }
+
+    .quote-section, .social-links {
+        grid-column: auto; /* Allow sections to take full width */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links on small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slightly shift the section from the bottom */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Bring the section back to its normal position */
+    }
+}
+
+/* Applying the animation to the sections */
+.main-content > div {
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(20px); /* Start with a slight downward position */
+}
+
+/* Delay each section's animation */
+.main-content > div:nth-child(1) {
+    animation-delay: 0.2s; /* First section fades in first */
+}
+
+.main-content > div:nth-child(2) {
+    animation-delay: 0.4s; /* Second section fades in next */
+}
+
+.main-content > div:nth-child(3) {
+    animation-delay: 0.6s; /* Third section fades in next */
+}
+
+.main-content > div:nth-child(4) {
+    animation-delay: 0.8s; /* Fourth section fades in next */
+}
+
+.main-content > div:nth-child(5) {
+    animation-delay: 1s; /* Fifth section fades in next */
+}
+
+/* Add more nth-child selectors for further sections as necessary */
+
+/* Keyframes for header animation (fade-in + slide from top) */
+@keyframes headerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from slightly above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at its normal position */
+    }
+}
+
+/* Apply the animation to the header */
+header {
+    animation: headerFadeIn 1.2s ease-out forwards; /* Apply fade-in and slide effect */
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(-20px); /* Start slightly above */
+}
+
+/* Animation delay for header if you want it to animate after the page loads */
+header {
+    animation-delay: 0.5s; /* Delay it slightly after the page load */
+}
+
+
+
+
+
+
+
