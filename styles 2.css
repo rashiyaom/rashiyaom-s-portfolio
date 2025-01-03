@@ -462,5 +462,110 @@ header {
 
 
 
+/* Adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem; /* Reduce container padding */
+    }
 
+    .quote-section {
+        grid-column: auto; /* Allow full-width for smaller screens */
+        height: auto; /* Adjust height for content */
+        padding: 1rem;
+    }
+
+    .quote-section h1 {
+        font-size: 2rem; /* Smaller font size */
+        line-height: 1.4;
+        margin-top: 50px;
+    }
+
+    .profile-section img {
+        height: auto; /* Adjust height for better aspect ratio */
+    }
+
+    .bio-section h2 {
+        font-size: 1.5rem; /* Smaller heading size */
+    }
+
+    .bio-section p {
+        font-size: 0.9rem; /* Adjust text size */
+        margin-top: 20px;
+    }
+
+    .contact-me h2 {
+        font-size: 2rem; /* Reduce heading size */
+        margin-top: 100px; /* Adjust spacing */
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack contact details vertically */
+        text-align: center;
+        gap: 1rem; /* Add space between items */
+    }
+
+    .languages-section h2 {
+        font-size: 1rem;
+    }
+
+    .languages-section ul {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack icons vertically */
+        gap: 1rem; /* Add space between links */
+    }
+}
+
+/* Adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 1.8rem; /* Reduce logo size */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation on very small screens */
+    }
+
+    .quote-section h1 {
+        font-size: 1.8rem; /* Smaller font for quotes */
+    }
+
+    .hero-text {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    .about-header h1 {
+        font-size: 1.5rem; /* Smaller about heading */
+    }
+
+    .social-links a {
+        font-size: 0.8rem; /* Reduce link text size */
+    }
+
+    .contact-me {
+        padding: 1rem; /* Adjust padding for small screens */
+    }
+
+    .profile-section img {
+        height: 200px; /* Further reduce image height */
+    }
+
+    .bio-section p {
+        font-size: 0.8rem; /* Adjust text size for bio */
+    }
+
+    .bio-section h2 {
+        font-size: 1.2rem; /* Reduce heading size */
+    }
+
+    .languages-section ul {
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .languages-section svg {
+        transform: scale(1.5); /* Adjust SVG size */
+    }
+}
 
